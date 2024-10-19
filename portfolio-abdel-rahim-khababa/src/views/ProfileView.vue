@@ -155,7 +155,7 @@
     <h3>Mon CV</h3>
     <!-- Affiche le PDF dans un iframe -->
     <iframe
-      src="/src/assets/pdf/cv.pdf"  
+      src="../assets/pdf/cv.pdf"  
       width="100%"
       height="820px"
       style="border: none;"
@@ -163,7 +163,7 @@
 
     <!-- Bouton de téléchargement du PDF -->
     <div class="download-button">
-      <a href="/src/assets/pdf/cv.pdf" download="cv.pdf"> <!-- Chemin en dur pour le téléchargement -->
+      <a href="../assets/pdf/cv.pdf" download="cv.pdf"> <!-- Chemin en dur pour le téléchargement -->
         <button>Télécharger le CV</button>
       </a>
     </div>
