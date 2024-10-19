@@ -143,7 +143,7 @@
   </div>
   <div class="skill">
     <div class="skill-image">
-      <img class="langue" src="./assets/svg/sa.svg" alt="Arabe">
+      <img class="langue" src="../assets/svg/sa.svg" alt="Arabe">
       <div class="tooltip">Arabe</div>
     </div>
     <div class="progress-bar">
