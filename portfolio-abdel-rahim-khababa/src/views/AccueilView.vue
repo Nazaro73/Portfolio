@@ -10,22 +10,16 @@
             <span>Section Profile</span>
           </div>
         </router-link>
-        <router-link to="/loisirs" class="carousel-item">
-          <div class="content">
-            <h2>Mes Loisirs</h2>
-            <span>Section Loisirs</span>
-          </div>
-        </router-link>
         <router-link to="/project" class="carousel-item">
           <div class="content">
             <h2>Mes Projets</h2>
             <span>Section Projets</span>
           </div>
         </router-link>
-        <router-link to="/discutons" class="carousel-item">
+        <router-link to="/contact" class="carousel-item">
           <div class="content">
-            <h2>Discutons</h2>
-            <span>Section Chatbot</span>
+            <h2>Contact</h2>
+            <span>Section Contact</span>
           </div>
         </router-link>
       </div>

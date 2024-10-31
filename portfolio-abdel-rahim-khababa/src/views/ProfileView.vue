@@ -336,7 +336,7 @@ h1 {
 }
 
 .progress {
-  background-color: #4caf50;
+  background-color: #0056b3;
   height: 100%;
   border-radius: 25px;
   transition: width 0.3s ease;
