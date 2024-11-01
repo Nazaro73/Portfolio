@@ -236,7 +236,7 @@ h1 {
   content: '';
   position: absolute;
   width: 6px;
-  background-color: #2196F3;
+  background-color: #4466ff;
   top: 0;
   bottom: 0;
   left: 20px;
@@ -245,7 +245,7 @@ h1 {
 
 .story-section h2 {
   font-size: 1.5rem;
-  color: #2196F3;
+  color: #4466ff;
   margin-bottom: 10px;
 }
 
@@ -262,7 +262,7 @@ h1 {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #2196F3;
+  background-color: #4466ff;
   top: 20px;
   left: 10px;
   border: 4px solid white;
@@ -336,7 +336,7 @@ h1 {
 }
 
 .progress {
-  background-color: #0056b3;
+  background-color: #4466ff;
   height: 100%;
   border-radius: 25px;
   transition: width 0.3s ease;
@@ -362,7 +362,7 @@ h1 {
 }
 
 button {
-  background-color: #007bff;
+  background-color: #4466ff;
   color: white;
   border: none;
   padding: 10px 20px;

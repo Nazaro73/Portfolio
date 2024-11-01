@@ -103,9 +103,8 @@ export default {
 </script>
 
 <style scoped>
-/* Import arcade-style font from Google Fonts */
-/* Import police Ubuntu Mono */
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+
 
 .body{
   width: 100vw;
@@ -126,14 +125,14 @@ export default {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu Mono', monospace; /* Police développeur */
-    color: #2b2b2b; /* Couleur de texte douce */
-    background-color: #2b2b2b;
+    color: #4466ff; /* Couleur de texte douce */
+    background-color: #111;
 }
 
 
 
 html, body {
-    background-color: #1e1e1e; /* Fond sombre mais pas trop contrasté */
+    background-color: #111; /* Fond sombre mais pas trop contrasté */
     line-height: 1.6; /* Meilleure lisibilité */
     padding: 20px;
 }
@@ -142,14 +141,14 @@ html, body {
 header {
     text-align: center;
     padding: 20px;
-    background-color: #2c2c2c; /* Fond légèrement plus foncé */
-    border-bottom: 2px solid #444; /* Lignes subtiles pour la séparation */
+    background-color: #111; /* Fond légèrement plus foncé */
+    border-bottom: 2px solid #131520; /* Lignes subtiles pour la séparation */
 }
 
 header h1 {
     font-size: 2rem;
     margin-bottom: 10px;
-    color: #e0e0e0; /* Blanc doux */
+    color: #4466ff; /* Blanc doux */
 }
 
 header p {
@@ -163,7 +162,7 @@ section {
     padding: 20px;
     width: 90%;
     max-width: 1000px;
-    background-color: #e0e0e0; /* Couleur sombre subtile pour le fond des sections */
+    background-color: #f7f7ff; /* Couleur sombre subtile pour le fond des sections */
     border-radius: 10px; /* Coins légèrement arrondis */
     border: 1px solid #444; /* Bordure discrète */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Légère ombre pour donner de la profondeur */
@@ -174,7 +173,7 @@ section {
 /* Style des titres de projets */
 section h2 {
     font-size: 1.5rem;
-    color: #2b2b2b;
+    color: #000002;
     margin-bottom: 20px;
 }
 
@@ -185,7 +184,7 @@ section img {
     width: 80%;
     max-width: 500px; /* Ajustement de la taille */
     border-radius: 10px;
-    border: 2px solid #444; /* Bordure subtile pour les images */
+    border: 2px solid #4466ff; /* Bordure subtile pour les images */
 }
 
 /* Texte de présentation des projets */
@@ -193,7 +192,7 @@ section p {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 20px;
-    color: #222222; /* Couleur de texte légèrement atténuée */
+    color: #000002; /* Couleur de texte légèrement atténuée */
     text-align: justify;
 }
 
@@ -205,11 +204,11 @@ section p {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #3a3a3a; /* Fond sombre et neutre */
+    background-color: #4466ff; /* Fond sombre et neutre */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #2b2b2b;
+    color: #ffffff;
     font-size: 1rem;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -249,6 +248,10 @@ section img[src$=".svg"] {
     width: 30px;
     height: 30px;
     margin: 5px;
+}
+
+a {
+  color: #4466ff;
 }
 
 
