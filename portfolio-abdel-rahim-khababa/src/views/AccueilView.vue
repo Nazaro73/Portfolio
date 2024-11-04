@@ -50,17 +50,18 @@
   background-size: cover;
   color: whitesmoke;
   font-family: "Ubuntu Mono", monospace;
+  padding: 20px;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2%;
 }
 
 h2 {
   margin-top: 2%;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
 }
 
@@ -68,12 +69,14 @@ h2 {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  height: 500px;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .carousel-item {
-  flex: 1; /* Prend de l'espace disponible */
+  flex: 1 1 30%; /* Par défaut, chaque item occupe environ 30% */
+  min-width: 250px; /* Largeur minimale pour chaque item */
+  height: 500px; /* Hauteur adaptée pour les petits écrans */
   border-radius: 0.5rem;
   transition: 0.5s ease-in-out;
   cursor: pointer;
@@ -81,6 +84,8 @@ h2 {
   position: relative;
   overflow: hidden;
   text-decoration: none; /* Enlève le soulignement du lien */
+  display: flex;
+  align-items: flex-end;
 }
 
 .carousel-item:nth-of-type(1) {
@@ -97,7 +102,7 @@ h2 {
 }
 
 .container .content {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #fff;
   display: flex;
   align-items: center;
@@ -106,21 +111,20 @@ h2 {
   flex-direction: column;
   height: 100%;
   justify-content: flex-end;
-  background: rgb(2, 2, 46);
   background: linear-gradient(
     0deg,
-    rgba(2, 2, 46, 0.6755077030812324) 0%,
+    rgba(2, 2, 46, 0.7) 0%,
     rgba(255, 255, 255, 0) 100%
   );
-  transform: translatey(100%);
+  transform: translateY(100%);
   transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
   visibility: hidden;
 }
 
 .carousel-item:hover {
-  flex: 2;
+  flex: 1.5; /* Ajuste la taille en survol pour être plus réactif */
   box-shadow: 1px 3px 15px #7645d8;
-  transform: translateY(-30px);
+  transform: translateY(-20px);
 }
 
 .carousel-item:hover .content {
@@ -132,6 +136,42 @@ h2 {
 .container .content span {
   display: block;
   margin-top: 5px;
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+
+/* Media Queries pour les écrans moyens et petits */
+@media (max-width: 1024px) {
+  h1, h2 {
+    font-size: 2rem;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carousel-item {
+    flex: 1 1 80%; /* Occupe plus d'espace sur les écrans moyens */
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-item {
+    flex: 1 1 100%; /* Chaque item occupe toute la largeur */
+    height: 200px;
+  }
+
+  .container .content {
+    font-size: 1rem;
+  }
 }
 </style>

@@ -302,7 +302,7 @@ h1 {
 
 /* Animation de l'image au survol */
 .skill img:hover {
-  transform: scale(1.3);
+  transform: scale(1.8);
 }
 
 /* Le texte qui apparaît sur le hover */
@@ -373,5 +373,7 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
+
 
 </style>

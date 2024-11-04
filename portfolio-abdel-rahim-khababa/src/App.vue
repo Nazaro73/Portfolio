@@ -10,7 +10,7 @@ const isLoading = ref(true)
 onMounted(() => {
   setTimeout(() => {
     isLoading.value = false // Cache le loader après le chargement
-  }, 2000) // Durée simulée
+  }, 5000) // Durée simulée
 })
 </script>
 
