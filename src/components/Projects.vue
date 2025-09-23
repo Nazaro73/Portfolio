@@ -215,14 +215,33 @@ import {
   X
 } from 'lucide-vue-next'
 
+// Typage des projets
+interface Project {
+  id: number
+  title: string
+  description: string
+  longDescription?: string
+  category: 'frontend' | 'fullstack' | 'mobile' | 'backend'
+  technologies: string[]
+  duration: string
+  status?: string
+  team?: string
+  url?: string
+  github?: string
+  demo?: string
+  delay?: number
+  features?: string[]
+  challenges?: string[]
+}
+
 gsap.registerPlugin(ScrollTrigger)
 
 const projectsRef = ref<HTMLElement>()
 const projectsGridRef = ref<HTMLElement>()
-const activeFilter = ref('all')
-const selectedProject = ref(null)
+const activeFilter = ref<'all' | Project['category']>('all')
+const selectedProject = ref<Project | null>(null)
 
-const projects = [
+const projects: Project[] = [
   {
     id: 1,
     title: 'Plateforme E-Learning Biologie',
@@ -398,7 +417,7 @@ const filteredProjects = computed(() => {
   return projects.filter(project => project.category === activeFilter.value)
 })
 
-const setFilter = (filter: string) => {
+const setFilter = (filter: Project['category'] | 'all') => {
   activeFilter.value = filter
   animateFilterChange()
 }
@@ -418,8 +437,8 @@ const animateFilterChange = () => {
   })
 }
 
-const getCategoryName = (category: string) => {
-  const names = {
+const getCategoryName = (category: Project['category']) => {
+  const names: Record<Project['category'], string> = {
     frontend: 'Frontend',
     fullstack: 'Full Stack',
     mobile: 'Mobile',
@@ -442,7 +461,7 @@ const getCodeLine = (n: number) => {
   return lines[n - 1] || ''
 }
 
-const viewProject = (project: any) => {
+const viewProject = (project: Project) => {
   selectedProject.value = project
 }
 
