@@ -314,7 +314,7 @@ const validateField = (field: string) => {
   }
 }
 
-const clearError = (field: string) => {
+const clearError = (field: keyof typeof errors) => {
   errors[field] = ''
 }
 
@@ -330,24 +330,24 @@ const validateForm = () => {
 
 const resetForm = () => {
   Object.keys(form).forEach(key => {
-    form[key] = ''
+    (form as any)[key] = ''
   })
   Object.keys(errors).forEach(key => {
-    errors[key] = ''
+    (errors as any)[key] = ''
   })
 }
 
 const submitForm = async () => {
   if (!validateForm()) {
     // Animation d'erreur
-    gsap.to(formRef.value, {
+    gsap.to(formRef.value!, {
       x: -10,
       duration: 0.1,
       repeat: 5,
       yoyo: true,
       ease: 'power2.inOut',
       onComplete: () => {
-        gsap.set(formRef.value, { x: 0 })
+        gsap.set(formRef.value!, { x: 0 })
       }
     })
     return

@@ -58,7 +58,7 @@ onMounted(() => {
   window.addEventListener('scroll', handleScroll)
 
   // Animation d'entrée du header
-  gsap.fromTo(headerRef.value, {
+  gsap.fromTo(headerRef.value!, {
     y: -100,
     opacity: 0
   }, {
