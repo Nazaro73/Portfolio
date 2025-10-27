@@ -6,6 +6,9 @@
 
     <div class="hero-content">
       <div class="hero-text">
+        <div class="logo-container">
+          <img src="/logo.jpg" alt="Logo" class="hero-logo" />
+        </div>
         <h1 class="hero-title">
           <span class="greeting">Bonjour, je suis</span>
           <span class="name">Abdel-Rahim KHABABA</span>
@@ -105,6 +108,19 @@ onMounted(() => {
     opacity: 1,
     duration: 1.5
   })
+
+  // Animation du logo
+  tl.fromTo('.hero-logo', {
+    scale: 0,
+    opacity: 0,
+    rotation: -180
+  }, {
+    scale: 1,
+    opacity: 1,
+    rotation: 0,
+    duration: 1,
+    ease: 'back.out(1.7)'
+  }, 0.3)
 
   // Animation du texte
   tl.fromTo('.greeting', {
@@ -289,8 +305,31 @@ onMounted(() => {
   color: white;
 }
 
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.hero-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+.hero-logo:hover {
+  transform: scale(1.05);
+  border-color: #3b82f6;
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.5);
+}
+
 .hero-title {
-  margin: 3rem 0 2rem 0;
+  margin: 0 0 2rem 0;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -539,6 +578,11 @@ onMounted(() => {
   .hero-content {
     padding: 2rem 1rem;
     gap: 2rem;
+  }
+
+  .hero-logo {
+    width: 100px;
+    height: 100px;
   }
 
   .name {
